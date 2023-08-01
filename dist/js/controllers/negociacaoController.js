@@ -26,9 +26,6 @@ export class NegociacaoController {
     ehDiaUtil(data) {
         return data.getDay() > DiasDaSemana.DOMINGO && data.getDay() < DiasDaSemana.SABADO;
     }
-    criaNegociacao() {
-        return new Negociacao(new Date(this.inputData.value.replace('-', ',')), parseInt(this.inputQuantidade.value), parseFloat(this.inputValor.value));
-    }
     limparFormulario() {
         this.inputData.value = "";
         this.inputQuantidade.value = "";
