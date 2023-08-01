@@ -13,4 +13,12 @@ export class Negociacao {
         return this.quantidade * this.valor;
     }
 
+    public static criaDe(data: string, quantidade: string, valor: string): Negociacao {
+        return new Negociacao(
+            new Date(data.replace('-', ',')),
+            parseInt(quantidade),
+            parseFloat(valor)
+        );
+    }
+
 }
