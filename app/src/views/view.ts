@@ -20,7 +20,7 @@ export abstract class View<T> {
 
     protected abstract template(model: T): string;
 
-    @inspect()
+    @inspect
     @logarTempoDeExecucao(true)
     public update(model: T): void {
         let template = this.template(model);
