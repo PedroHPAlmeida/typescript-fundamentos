@@ -20,4 +20,9 @@ export class Negociacao {
     static criaDe(data, quantidade, valor) {
         return new Negociacao(new Date(data.replace('-', ',')), parseInt(quantidade), parseFloat(valor));
     }
+    ehIgual(negociacao) {
+        return this.data.getDate() === negociacao.data.getDate()
+            && this.data.getMonth() === negociacao.data.getMonth()
+            && this.data.getFullYear() === negociacao.data.getFullYear();
+    }
 }
