@@ -10,6 +10,13 @@ export class Negociacao {
     get volume() {
         return this.quantidade * this.valor;
     }
+    paraTexto() {
+        return `
+            Data: ${this.data} 
+            Quantidade: ${this.quantidade} 
+            Valor: ${this.valor} 
+        `;
+    }
     static criaDe(data, quantidade, valor) {
         return new Negociacao(new Date(data.replace('-', ',')), parseInt(quantidade), parseFloat(valor));
     }
